@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bikes Retail</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap">
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            background: url('Background_photo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: black;
+        }
+
+        #header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+        }
+
+        #slideshow-container {
+            position: relative;
+            max-width: 350px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            width: 100%;
+        }
+
+        #prev,
+        #next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 8px;
+            margin-top: -22px;
+            font-size: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+
+        #prev {
+            left: 0;
+        }
+
+        #next {
+            right: 0;
+        }
+
+        #welcome-text {
+            margin-top: 20px;
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        #bike-info ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            margin-left: 20px;
+        }
+
+#contact {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px; /* Add margin-top to create space between the content and contact section */
+}
+
+
+
+        a {
+            color: black;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>E-Bike Retail</h1>
+        <nav>
+            <a href="#slideshow-container">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#welcome-text">Info</a>
+        </nav>
+    </div>
+
+    <div id="slideshow-container">
+        <div class="mySlides">
+            <img src="image1.jpeg" alt="Image 1">
+        </div>
+
+        <div class="mySlides">
+            <img src="image2.jpeg" alt="Image 2">
+        </div>
+
+        <div class="mySlides">
+            <img src="image3.jpeg" alt="Image 3">
+        </div>
+
+        <div class="mySlides">
+            <img src="image4.jpeg" alt="Image 4">
+        </div>
+
+        <a id="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a id="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div id="welcome-text">
+        <p>Welkom bij E-Bikes Retail!</p>
+        <p>Ontdek de opwinding van het avontuur op twee wielen met onze indrukwekkende E-bike! Of je nu een doorgewinterde fietser bent of gewoon op zoek bent naar een nieuwe manier om de natuur te verkennen, we hebben de perfecte fiets voor jou.</p>
+        <p>Blader door onze galerij van E-bikes en laat je inspireren door de krachtige beelden van grenzeloze vrijheid.</p>
+
+        
+        <div id="bike-info">
+         <ul>
+    <li>Merk:</strong> Raaks</li>
+    <li>Model:</strong> TNT</li>
+    <li>Actieradius:</strong> 40-70 km</li>
+    <li>Wielmaat:</strong> 20''</li>
+    <li>Kleur:</strong> Mat Zwart</li>
+    <li>Lengte:</strong> Uni</li>
+    <li>Versnellingen:</strong> 7</li>
+    <li>Ondersteuningsstanden:</strong> 5</li>
+</ul>
+
+<p>Ontdek de grenzen van elektrisch fietsen met de TNT10 E-bike. Deze krachtige fiets biedt een moeiteloze en opwindende rijervaring. Uitgerust met geavanceerde technologie en een krachtige elektrische motor, is de TNT10 ideaal voor zowel stadsritten als ontspannen tochten dankzij de lange batterijduur.</p>
+
+<p>Het moderne, gestroomlijnde ontwerp zorgt voor stijlvolle ritten, en de comfortabele ervaring wordt versterkt door ergonomische handvatten, een zacht zadel en geavanceerde schokdemping. Met intuïtieve bedieningselementen kun je eenvoudig de ondersteuningsniveaus aanpassen.</p>
+
+<p>De TNT10 is gebouwd met duurzame materialen van hoogwaardige kwaliteit, wat resulteert in een langdurige en innovatieve fietservaring. Voeg een nieuwe dimensie toe aan je fietsavonturen met de TNT10 E-bike, waar innovatie en mobiliteit samenkomen.</p>
+
+        </div>
+
+  
+    </div>
+
+    <div id="contact">
+        <p>Contact: +31 637354507</p>
+        <p>Instagram: <a href="https://www.instagram.com/semvis/">@semmix02</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 E-Bikes Retail | Designed by MVW</p>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        showSlides(slideIndex);
+    </script>
+</body>
+
+</html>
